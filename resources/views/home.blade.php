@@ -68,7 +68,7 @@ label {
             <td>{{ $value->upc }}</td>
             <td>
 
-		<button class="btn btn-sm btn-primary" href="{{ URL::to('product/' . $value->id . '/edit') }}">Edit</button> &nbsp;
+		<a class="btn btn-sm btn-primary" href="{{ URL::to('product/' . $value->id . '/edit') }}">Edit</a> &nbsp;
 
 		<form action="{{ route('product.destroy', $value->id)}}" method="post" style="display: inline-block">
                     @csrf
