@@ -136,7 +136,7 @@ class ProductManagerController extends Controller
 		// delete image once record deleted
 		if(file_exists(public_path('uploads')."/".$pid->image)){
 			unlink(public_path('uploads')."/".$pid->image);	
-		{
+		}
         	$pid->delete();
                 return redirect()->route('home')->with('success','Company has been deleted successfully');
 	}catch(Throwable $e){
@@ -152,7 +152,7 @@ class ProductManagerController extends Controller
                 // delete image once record deleted
                 if(file_exists(public_path('uploads')."/".$did->image)){
                         unlink(public_path('uploads')."/".$pid->image);
-                {
+                }
                 $pid->delete();
                 return redirect()->route('home')->with('success','Company has been deleted successfully');
         }catch(Throwable $e){
